@@ -1,29 +1,40 @@
 # Angular Style Guide
 
-*Angular­·®æ«ü«n by [@john_papa](//twitter.com/john_papa)*
+*Angularé¢¨æ ¼æŒ‡å— by [@john_papa](//twitter.com/john_papa)*
 
 If you are looking for an opinionated style guide for syntax, conventions, and structuring Angular applications, then step right in. These styles are based on my development experience with [Angular](//angularjs.org), presentations, [Pluralsight training courses](http://pluralsight.com/training/Authors/Details/john-papa) and working in teams.
 
-¦pªG§A¦b´M§ä¤@¥÷Ãö©óAngular appªº»yªk¡B®æ¦¡¥H¤Îµ²ºcªº­·®æ«ü«nªº¸Ü¡A¨º´N±µµÛ¬İ¤U¥h§a¡C³o¥÷­·®æ«ü«n¬O°ò©ó§Ú¦b[Angular](//angularjs.org)¤Wªº¶}µo¸gÅç¡B¤@¨ÇÃö©ó³o¤è­±ªººtÁ¿¡B[Pluralsight training courses](http://pluralsight.com/training/Authors/Details/john-papa)¥H¤Î¦b¹Î¶¤¤¤¤u§@ªº¤ß±o¦Ó¼g¦¨¡C
+å¦‚æœä½ åœ¨å°‹æ‰¾ä¸€ä»½é—œæ–¼Angular appçš„èªæ³•ã€æ ¼å¼ä»¥åŠçµæ§‹çš„é¢¨æ ¼æŒ‡å—çš„è©±ï¼Œé‚£å°±æ¥è‘—çœ‹ä¸‹å»å§ã€‚é€™ä»½é¢¨æ ¼æŒ‡å—æ˜¯åŸºæ–¼æˆ‘åœ¨[Angular](//angularjs.org)ä¸Šçš„é–‹ç™¼ç¶“é©—ã€ä¸€äº›é—œæ–¼é€™æ–¹é¢çš„æ¼”è¬›ã€[Pluralsight training courses](http://pluralsight.com/training/Authors/Details/john-papa)ä»¥åŠåœ¨åœ˜éšŠä¸­å·¥ä½œçš„å¿ƒå¾—è€Œå¯«æˆã€‚
 
 The purpose of this style guide is to provide guidance on building Angular applications by showing the conventions I use and, more importantly, why I choose them.
 
-³o¥÷­·®æ«ü«nªº¥Øªº¬O¦b§A«Ø¥ßAngular appªº¹Lµ{¤¤´£¨Ñ¤@¨ÇÀ°§U¡F§Ú·|¦b¸Ì­±®i¥Ü¤@¨Ç§Ú±`¥Îªº¤èªk¡A·íµM§ó­«­nªº¬O¡A¬°¤°»ò§Ú·|³o¼Ë°µ¡C
+é€™ä»½é¢¨æ ¼æŒ‡å—çš„ç›®çš„æ˜¯åœ¨ä½ å»ºç«‹Angular appçš„éç¨‹ä¸­æä¾›ä¸€äº›å¹«åŠ©ï¼›æˆ‘æœƒåœ¨è£¡é¢å±•ç¤ºä¸€äº›æˆ‘å¸¸ç”¨çš„æ–¹æ³•ï¼Œç•¶ç„¶æ›´é‡è¦çš„æ˜¯ï¼Œç‚ºä»€éº¼æˆ‘æœƒé€™æ¨£åšã€‚
 
 >If you like this guide, check out my [Angular Patterns: Clean Code](http://jpapa.me/ngclean) course at Pluralsight which is a companion to this guide.
-
+>å¦‚æœä½ å–œæ­¡é€™ä»½æŒ‡å—ï¼Œå¯ä»¥åƒè€ƒæˆ‘åœ¨Pluralsightä¸Šé–‹çš„èª²ç¨‹[Angular Patterns: Clean Code](http://jpapa.me/ngclean)ï¼Œä»–æœƒæ˜¯é€™ä»½æŒ‡å—çš„å¥½å¤¥ä¼´ã€‚
   [![AngularJs Patterns: Clean Code](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/ng-clean-code-banner.png)](http://jpapa.me/ngclean)
 
 ## Community Awesomeness and Credit
 Never work in a vacuum. I find that the Angular community is an incredible group who are passionate about sharing experiences. As such, a friend and Angular expert Todd Motto and I have collaborated on many styles and conventions. We agree on most, and some we diverge. I encourage you to check out [Todd's guidelines](https://github.com/toddmotto/angularjs-styleguide) to get a sense for his approach and how it compares.
 
+æ°¸é ä¸è¦é–‰é–€é€ è»Šã€‚æˆ‘ç™¼ç¾Angularç¤¾ç¾¤æ˜¯ä¸€å€‹å……æ»¿ç†±æƒ…ä¸”æ¨‚æ–¼åˆ†äº«ç¶“é©—çš„åœ°æ–¹ã€‚å› æ­¤ï¼Œæˆ‘å’Œçš„æœ‹å‹-Angularå°ˆå®¶Todd Mottoåœ¨è¨±å¤šé¢¨æ ¼å’Œè¦ç¯„ä¸Šåˆä½œéã€‚å¤§éƒ¨ä»½çš„æ™‚å€™æˆ‘å€‘çš„çœ‹æ³•æ˜¯ç›¸åŒçš„ï¼Œä¸éåœ¨æŸäº›åœ°æ–¹ä»æœ‰æ‰€å²ç•°ã€‚
+æˆ‘é¼“å‹µä½ åƒè€ƒ[Todd's guidelines](https://github.com/toddmotto/angularjs-styleguide)ä¸¦ä¸”æ„Ÿå—å…©è€…é–“çš„å·®ç•°ã€‚
+
 Many of my styles have been from the many pair programming sessions [Ward Bell](http://twitter.com/wardbell) and I have had. My friend Ward has certainly helped influence the ultimate evolution of this guide.
+
+æˆ‘å¾ˆå¤šçš„é¢¨æ ¼ä¾†è‡ªæ–¼è·Ÿ[Ward Bell](http://twitter.com/wardbell)çµå°ç·¨ç¨‹ï¼ˆpair programmingï¼‰çš„éç¨‹ä¸­ï¼Œé€™ä½å¥½å‹å°æ–¼é€™ç¯‡æŒ‡å—çš„å¹«åŠ©å¾ˆå¤§ã€‚
 
 ## See the Styles in a Sample App
 While this guide explains the *what*, *why* and *how*, I find it helpful to see them in practice. This guide is accompanied by a sample application that follows these styles and patterns. You can find the [sample application (named modular) here](https://github.com/johnpapa/ng-demos) in the `modular` folder. Feel free to grab it, clone it, or fork it. [Instructions on running it are in its readme](https://github.com/johnpapa/ng-demos/tree/master/modular).
 
+é›–ç„¶é€™ä»½æŒ‡å—æœƒè§£é‡‹*what*ã€*why*ä»¥åŠ*how*ï¼Œä¸éæˆ‘ç™¼ç¾åœ¨å¯¦ä¾‹ä¸­ä½¿ç”¨å®ƒå€‘æœƒæ›´æœ‰å¹«åŠ©ã€‚é€™ä»½æŒ‡å—ä¼´éš¨è‘—é€™å€‹[ç¯„ä¾‹appï¼ˆmodularï¼‰](https://github.com/johnpapa/ng-demos/tree/master/modular)ï¼Œ
+æ­¡è¿grabã€cloneæˆ–forkä»–ã€‚
+
+
 ##Translations
 [Translations of this Angular style guide](https://github.com/johnpapa/angular-styleguide/tree/master/i18n) are maintained by the community and can be found here.
+
+é€™ä»½æŒ‡å—çš„ç¿»è­¯ç‰ˆæœ¬æ˜¯ç”±ç¤¾ç¾¤ä¾†ç¶­è­·çš„ï¼Œå¯ä»¥åœ¨[é€™è£¡](https://github.com/johnpapa/angular-styleguide/tree/master/i18n)æŸ¥çœ‹ã€‚
 
 ## Table of Contents
 
@@ -66,14 +77,14 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ###### [Style [Y001](#style-y001)]
 
   - Define 1 component per file.
-  - ¤@­ÓÀÉ®×¸Ì­±¥u©w¸q¤@­ÓComponent
+  - ä¸€å€‹æª”æ¡ˆè£¡é¢åªå®šç¾©ä¸€å€‹Component
 
   The following example defines the `app` module and its dependencies, defines a controller, and defines a factory all in the same file.
-  
-  ¤U­±³o­Ó½d¨Ò¦b¦P¤@­ÓÀÉ®×¸Ì­±©w¸q¤F`app` module¥H¤Î¥Lªº¨Ì¿à¡A¥t¥~¤S©w¸q¤F¤@­Ócontroller¥H¤Î¤@­Ófactory¡C
+
+  ä¸‹é¢é€™å€‹ç¯„ä¾‹åœ¨åŒä¸€å€‹æª”æ¡ˆè£¡é¢å®šç¾©äº†`app` moduleä»¥åŠä»–çš„ä¾è³´ï¼Œå¦å¤–åˆå®šç¾©äº†ä¸€å€‹controllerä»¥åŠä¸€å€‹factoryã€‚
 
   ```javascript
-  /* ¤£«ØÄ³ */
+  /* ä¸å»ºè­° */
   angular
       .module('app', ['ngRoute'])
       .controller('SomeController', SomeController)
@@ -85,11 +96,11 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   The same components are now separated into their own files.
-  
-  ²{¦b§Ú­Ì§â¨C­ÓComponet¤À§O¼g¦b¤£¦PªºÀÉ®×¸Ì
+
+  ç¾åœ¨æˆ‘å€‘æŠŠæ¯å€‹Componetåˆ†åˆ¥å¯«åœ¨ä¸åŒçš„æª”æ¡ˆè£¡
 
   ```javascript
-  /* «ØÄ³ */
+  /* å»ºè­° */
 
   // app.module.js
   angular
@@ -97,7 +108,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   ```javascript
-  /* «ØÄ³ */
+  /* å»ºè­° */
 
   // someController.js
   angular
@@ -108,7 +119,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   ```javascript
-  /* «ØÄ³ */
+  /* å»ºè­° */
 
   // someFactory.js
   angular
@@ -118,22 +129,22 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   function someFactory() { }
   ```
 
-**[¦^¨ì³»³¡](#table-of-contents)**
+**[å›åˆ°é ‚éƒ¨](#table-of-contents)**
 
 ## IIFE
 ### JavaScript Closures
 ###### [Style [Y010](#style-y010)]
 
   - Wrap Angular components in an Immediately Invoked Function Expression (IIFE).
-  - §âAngular componets¥]¸Ë¨ì¤@­Ó¥ß§Y¦¡(IIFE, Immediately Invoked Function Expression)¸Ì­±¡C
+  - æŠŠAngular componetsåŒ…è£åˆ°ä¸€å€‹ç«‹å³å¼(IIFE, Immediately Invoked Function Expression)è£¡é¢ã€‚
 
   *Why?*: An IIFE removes variables from the global scope. This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions.
-  
-  *¬°¤°»ò¡H*: IIFE·|§â¨Ó¦Û¥ş°ìªºÅÜ¼Æ²¾°£¡A³o¥i¥H¨¾¤îÅÜ¼Æ¥H¤Î¨ç¦¡¦b¥ş°ì¤¤¦³¤ñ¹w´Áªøªº¥Í©R¶g´Á¡A¤]¥i¥HÁ×§K²£¥Í½Ä¬ğ¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*: IIFEæœƒæŠŠä¾†è‡ªå…¨åŸŸçš„è®Šæ•¸ç§»é™¤ï¼Œé€™å¯ä»¥é˜²æ­¢è®Šæ•¸ä»¥åŠå‡½å¼åœ¨å…¨åŸŸä¸­æœ‰æ¯”é æœŸé•·çš„ç”Ÿå‘½é€±æœŸï¼Œä¹Ÿå¯ä»¥é¿å…ç”¢ç”Ÿè¡çªã€‚
 
   *Why?*: When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file.
-  
-  *¬°¤°»ò¡H*: ·í§A¦bÀ£ÁY©Î¦X¨Ö¤å¥ó®É¡AIIFE¥i¥Hµ¹¨C­Ó¤å¥ó¤@­Ó³æ¿Wªºfunction scope¡AÁ×§KÅÜ¼Æ²£¥Í½Ä¬ğ¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*: ç•¶ä½ åœ¨å£“ç¸®æˆ–åˆä½µæ–‡ä»¶æ™‚ï¼ŒIIFEå¯ä»¥çµ¦æ¯å€‹æ–‡ä»¶ä¸€å€‹å–®ç¨çš„function scopeï¼Œé¿å…è®Šæ•¸ç”¢ç”Ÿè¡çªã€‚
 
   ```javascript
   /* avoid */
@@ -185,36 +196,36 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   - Note: For brevity only, the rest of the examples in this guide may omit the IIFE syntax.
-  - µù¡G¬°¤F¤è«K¡A¤U­±ªº½d¨Ò·|¬Ù²¤IIFE
+  - è¨»ï¼šç‚ºäº†æ–¹ä¾¿ï¼Œä¸‹é¢çš„ç¯„ä¾‹æœƒçœç•¥IIFE
 
   - Note: IIFE's prevent test code from reaching private members like regular expressions or helper functions which are often good to unit test directly on their own. However you can test these through accessible members or by exposing them through their own component. For example placing helper functions, regular expressions or constants in their own factory or constant.
-  - µù¡GIIFE·|¨¾¤îtest code¦s¨ú¨p¦³ªº¦¨­û¡]¨Ò¦p¥¿³Wªí¥Ü¦¡¡Bhelper¨ç¦¡µ¥¡^¡A³o¹ï©ó¦Û¨­ªº³æ¤¸´ú¸Õ¦³À°§U¡C¤£¹L§A¤]¥i¥H§â³o¨Ç¨p¦³ªº¦¨­û¼ÉÅS¥X¨Ó¶i¦æ´ú¸Õ¡A¨Ò¦p§â¥¦­Ì©ñ¨ìfactory©Î¬Oconstant¸Ì­±¡C
+  - è¨»ï¼šIIFEæœƒé˜²æ­¢test codeå­˜å–ç§æœ‰çš„æˆå“¡ï¼ˆä¾‹å¦‚æ­£è¦è¡¨ç¤ºå¼ã€helperå‡½å¼ç­‰ï¼‰ï¼Œé€™å°æ–¼è‡ªèº«çš„å–®å…ƒæ¸¬è©¦æœ‰å¹«åŠ©ã€‚ä¸éä½ ä¹Ÿå¯ä»¥æŠŠé€™äº›ç§æœ‰çš„æˆå“¡æš´éœ²å‡ºä¾†é€²è¡Œæ¸¬è©¦ï¼Œä¾‹å¦‚æŠŠå®ƒå€‘æ”¾åˆ°factoryæˆ–æ˜¯constantè£¡é¢ã€‚
 
 **[Back to top](#table-of-contents)**
 
 ## Modules
 
 ### Avoid Naming Collisions
-### Á×§K©R¦W½Ä¬ğ
+### é¿å…å‘½åè¡çª
 ###### [Style [Y020](#style-y020)]
 
   - Use unique naming conventions with separators for sub-modules.
-  - ¬°sub-modules©R¦W®É¨Ï¥Î±a¦³separatorsªº©R¦W³W½d¡C¡]Ä¶µù¡G«üªº´N¬Oparent.sub³o¼Ëªº¤è¦¡¡^
+  - ç‚ºsub-moduleså‘½åæ™‚ä½¿ç”¨å¸¶æœ‰separatorsçš„å‘½åè¦ç¯„ã€‚ï¼ˆè­¯è¨»ï¼šæŒ‡çš„å°±æ˜¯parent.subé€™æ¨£çš„æ–¹å¼ï¼‰
 
   *Why?*: Unique names help avoid module name collisions. Separators help define modules and their submodule hierarchy. For example `app` may be your root module while `app.dashboard` and `app.users` may be modules that are used as dependencies of `app`.
-  
-  *¬°¤°»ò¡H*¡GÁ×§Kmoduleªº¦WºÙ½Ä¬ğ¡A¦Ó¥Bseparators¥i¥HÀ°§U©w¸q¼Ò²Õªº¼h¦¸¡C¨Ò¦p`app`¥i¯à¬O§Aªºroot module¡A¦Ó`app.dashboard`¸ò`app.users`«h¬O¨Ì¿à©ó`app`ªºsub module¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šé¿å…moduleçš„åç¨±è¡çªï¼Œè€Œä¸”separatorså¯ä»¥å¹«åŠ©å®šç¾©æ¨¡çµ„çš„å±¤æ¬¡ã€‚ä¾‹å¦‚`app`å¯èƒ½æ˜¯ä½ çš„root moduleï¼Œè€Œ`app.dashboard`è·Ÿ`app.users`å‰‡æ˜¯ä¾è³´æ–¼`app`çš„sub moduleã€‚
 
 ### Definitions (aka Setters)
-### ©w¸q(aka Setters)
+### å®šç¾©(aka Setters)
 ###### [Style [Y021](#style-y021)]
 
   - Declare modules without a variable using the setter syntax.
-  - «Å§imoduleªº®É­Ô¤£­n¨Ï¥Î§t¦³setter»yªkªºÅÜ¼Æ¡C¡]Ä¶µù¡GÂ²³æ¨Ó»¡´N¬O¤£»İ­n«Å§i¤@­ÓÅÜ¼Æµ¹module¡^
+  - å®£å‘Šmoduleçš„æ™‚å€™ä¸è¦ä½¿ç”¨å«æœ‰setterèªæ³•çš„è®Šæ•¸ã€‚ï¼ˆè­¯è¨»ï¼šç°¡å–®ä¾†èªªå°±æ˜¯ä¸éœ€è¦å®£å‘Šä¸€å€‹è®Šæ•¸çµ¦moduleï¼‰
 
   *Why?*: With 1 component per file, there is rarely a need to introduce a variable for the module.
-  
-  *¬°¤°»ò¡H*¡G·í¨C­ÓÀÉ®×¤¤¥u¦³¤@­Ócomponentªº®É­Ô¡A¤£¤Ó»İ­n«Å§i¤@­ÓÅÜ¼Æµ¹¥L¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šç•¶æ¯å€‹æª”æ¡ˆä¸­åªæœ‰ä¸€å€‹componentçš„æ™‚å€™ï¼Œä¸å¤ªéœ€è¦å®£å‘Šä¸€å€‹è®Šæ•¸çµ¦ä»–ã€‚
 
   ```javascript
   /* avoid */
@@ -227,7 +238,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
   Instead use the simple setter syntax.
-  ¥ÎÂ²³æªºsetter»yªk¨Ó¨ú¥N¡C
+  ç”¨ç°¡å–®çš„setterèªæ³•ä¾†å–ä»£ã€‚
 
   ```javascript
   /* recommended */
@@ -244,11 +255,11 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ###### [Style [Y022](#style-y022)]
 
   - When using a module, avoid using a variable and instead use chaining with the getter syntax.
-  - ·í¨Ï¥Î¤@­Ómoduleªº®É­Ô¡A¾¨¶q¥ÎÃì¦¡»yªk¡]chaining¡^¡A¦Ó¤£¬O¨Ï¥ÎÅÜ¼Æ¡C
+  - ç•¶ä½¿ç”¨ä¸€å€‹moduleçš„æ™‚å€™ï¼Œå„˜é‡ç”¨éˆå¼èªæ³•ï¼ˆchainingï¼‰ï¼Œè€Œä¸æ˜¯ä½¿ç”¨è®Šæ•¸ã€‚
 
   *Why?*: This produces more readable code and avoids variable collisions or leaks.
-  
-  *¬°¤°»ò¡H*¡G³o¼Ëªº¼gªk¥iÅª©Ê§ó°ª¡A¦Ó¥B¥i¥HÁ×§K½Ä¬ğ©ÎªÌ¬ªº|¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šé€™æ¨£çš„å¯«æ³•å¯è®€æ€§æ›´é«˜ï¼Œè€Œä¸”å¯ä»¥é¿å…è¡çªæˆ–è€…æ´©æ¼ã€‚
 
   ```javascript
   /* avoid */
@@ -271,11 +282,11 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ###### [Style [Y023](#style-y023)]
 
   - Only set once and get for all other instances.
-  - À³¸Ó¥uset¤@¦¸¡A¨Ã¥BÅı¨ä¥Lªº¹ê¨Ò¨ú¥Î
+  - æ‡‰è©²åªsetä¸€æ¬¡ï¼Œä¸¦ä¸”è®“å…¶ä»–çš„å¯¦ä¾‹å–ç”¨
 
   *Why?*: A module should only be created once, then retrieved from that point and after.
-  
-  *¬°¤°»ò¡H*¡G¤@­ÓmoduleÀ³¸Ó¥u«Ø¥ß¤@¦¸¡A¦b³o¤§«áªº¦a¤è³£À³¸Ó¨ú¥Î¥L
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šä¸€å€‹moduleæ‡‰è©²åªå»ºç«‹ä¸€æ¬¡ï¼Œåœ¨é€™ä¹‹å¾Œçš„åœ°æ–¹éƒ½æ‡‰è©²å–ç”¨ä»–
 
     - Use `angular.module('app', []);` to set a module.
     - Use `angular.module('app');` to get a module.
@@ -284,11 +295,11 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ###### [Style [Y024](#style-y024)]
 
   - Use named functions instead of passing an anonymous function in as a callback.
-  - ¦bcallback¤¤¥Î¨ã¦W¨ç¦¡¨ú¥N°Î¦W¨ç¦¡
+  - åœ¨callbackä¸­ç”¨å…·åå‡½å¼å–ä»£åŒ¿åå‡½å¼
 
   *Why?*: This produces more readable code, is much easier to debug, and reduces the amount of nested callback code.
-  
-  *¬°¤°»ò¡H*¡G³o¼Ëªº¼gªk¥iÅª©Ê§ó°ª¡A§ó®e©ödebug¡A¦Ó¥B¥i¥HÁ×§K¤Ó¦h¼hªºcallback code¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šé€™æ¨£çš„å¯«æ³•å¯è®€æ€§æ›´é«˜ï¼Œæ›´å®¹æ˜“debugï¼Œè€Œä¸”å¯ä»¥é¿å…å¤ªå¤šå±¤çš„callback codeã€‚
 
   ```javascript
   /* avoid */
@@ -323,23 +334,23 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ## Controllers
 
 ### controllerAs View Syntax
-### ¦bView¸Ì­±¨Ï¥ÎcontrollerAs»yªk
+### åœ¨Viewè£¡é¢ä½¿ç”¨controllerAsèªæ³•
 ###### [Style [Y030](#style-y030)]
 
   - Use the [`controllerAs`](http://www.johnpapa.net/do-you-like-your-angular-controllers-with-or-without-sugar/) syntax over the `classic controller with $scope` syntax.
-  - ¥Î[`controllerAs`](http://www.johnpapa.net/do-you-like-your-angular-controllers-with-or-without-sugar/)»yªk¨Ó¨ú¥N¤@¯ëªº»yªk¡C
+  - ç”¨[`controllerAs`](http://www.johnpapa.net/do-you-like-your-angular-controllers-with-or-without-sugar/)èªæ³•ä¾†å–ä»£ä¸€èˆ¬çš„èªæ³•ã€‚
 
   *Why?*: Controllers are constructed, "newed" up, and provide a single new instance, and the `controllerAs` syntax is closer to that of a JavaScript constructor than the `classic $scope syntax`.
-  
-  *¬°¤°»ò¡H*¡GController·|³Q«Øºc¡Anew¥X¨Ó¡A¨Ã¥B´£¨Ñ¤@­Ó·sªº¹ê¨Ò¡F¦Ó¥B`controllerAs`¦b»yªk¤W¤ñ¸û±µªñjavascriptªº«Øºc¦¡¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šControlleræœƒè¢«å»ºæ§‹ï¼Œnewå‡ºä¾†ï¼Œä¸¦ä¸”æä¾›ä¸€å€‹æ–°çš„å¯¦ä¾‹ï¼›è€Œä¸”`controllerAs`åœ¨èªæ³•ä¸Šæ¯”è¼ƒæ¥è¿‘javascriptçš„å»ºæ§‹å¼ã€‚
 
   *Why?*: It promotes the use of binding to a "dotted" object in the View (e.g. `customer.name` instead of `name`), which is more contextual, easier to read, and avoids any reference issues that may occur without "dotting".
-  
-  *¬°¤°»ò¡H*¡G«P¨Ï§A¦bView¸Ì­±¨Ï¥Î¦³`.`ªºObject°µbinding¡]¨Ò¦p¥Î`customer.name`¨ú¥N`name`¡^¡A³oºØ¼gªk´£°ª¤F¥iÅª©Ê¡B¸ò¤W¤U¤åªºÃöÁp©Ê¡A¨Ã¥BÁ×§K¦b¨Ï¥Î¤@¯ë¼gªk®É¥i¯à·|µo¥Íªºreference issue¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šä¿ƒä½¿ä½ åœ¨Viewè£¡é¢ä½¿ç”¨æœ‰`.`çš„Objectåšbindingï¼ˆä¾‹å¦‚ç”¨`customer.name`å–ä»£`name`ï¼‰ï¼Œé€™ç¨®å¯«æ³•æé«˜äº†å¯è®€æ€§ã€è·Ÿä¸Šä¸‹æ–‡çš„é—œè¯æ€§ï¼Œä¸¦ä¸”é¿å…åœ¨ä½¿ç”¨ä¸€èˆ¬å¯«æ³•æ™‚å¯èƒ½æœƒç™¼ç”Ÿçš„reference issueã€‚
 
   *Why?*: Helps avoid using `$parent` calls in Views with nested controllers.
-  
-  *¬°¤°»ò¡H*¡GÁ×§K§A¦b¦h¼h´O®Mªºcontroller¸Ì­±¨Ï¥Î`$parent`©I¥s¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šé¿å…ä½ åœ¨å¤šå±¤åµŒå¥—çš„controllerè£¡é¢ä½¿ç”¨`$parent`å‘¼å«ã€‚
 
   ```html
   <!-- avoid -->
@@ -356,23 +367,23 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
   ```
 
 ### controllerAs Controller Syntax
-### ¦bController¸Ì­±¨Ï¥ÎcontrollerAs»yªk
+### åœ¨Controllerè£¡é¢ä½¿ç”¨controllerAsèªæ³•
 ###### [Style [Y031](#style-y031)]
 
   - Use the `controllerAs` syntax over the `classic controller with $scope` syntax.
-  - ¥Î`controllerAs`»yªk¨Ó¨ú¥N¶Ç²Îªº`controller with $scope`»yªk¡C
+  - ç”¨`controllerAs`èªæ³•ä¾†å–ä»£å‚³çµ±çš„`controller with $scope`èªæ³•ã€‚
 
   - The `controllerAs` syntax uses `this` inside controllers which gets bound to `$scope`
-  - `controllerAs`»yªk¦bcontroller¤¤·|¥Î`this`¨Ó¨ú¥N`$scope`
+  - `controllerAs`èªæ³•åœ¨controllerä¸­æœƒç”¨`this`ä¾†å–ä»£`$scope`
 
   *Why?*: `controllerAs` is syntactic sugar over `$scope`. You can still bind to the View and still access `$scope` methods.
-  
-  *¬°¤°»ò¡H*¡G`controllerAs`»yªk¥u¬O¥Î¨Ó¨ú¥N`$scope`ªº»yªk¿}¡A§A¤´µM¥i¥H§â¸ê®Æ¸j©w¨ìview¤W¡A¤]¥i¥H¨Ï¥Î`$scope`ªº¤èªk¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼š`controllerAs`èªæ³•åªæ˜¯ç”¨ä¾†å–ä»£`$scope`çš„èªæ³•ç³–ï¼Œä½ ä»ç„¶å¯ä»¥æŠŠè³‡æ–™ç¶å®šåˆ°viewä¸Šï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨`$scope`çš„æ–¹æ³•ã€‚
 
   *Why?*: Helps avoid the temptation of using `$scope` methods inside a controller when it may otherwise be better to avoid them or move them to a factory. Consider using `$scope` in a factory, or if in a controller just when needed. For example when publishing and subscribing events using [`$emit`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$emit), [`$broadcast`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$broadcast), or [`$on`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$on) consider moving these uses to a factory and invoke from the controller.
-  
-  *¬°¤°»ò¡H*¡G³oºØ»yªk¥i¥HÀ°§U§A©è¾×¦b¤£¥¿½T®É¾÷¨Ï¥Î`$scope`ªº¤èªkªº»¤´b¡A¨Ò¦p§A¦³§ó¦nªº°µªk¡A©Î¬O¥L¥i¥H·h¨ìfactory¸Ì­±®É¡C¦bcontroller¸Ì¡A§AÀ³¸Ó¥u¦b¥²­n®É¨Ï¥Î`$scope`¡A¨ä¥Lªº®É­ÔÀ³¸Ó¦bfactory¸Ì­±¨Ï¥Î¡A
-  µM«á¦A±qcontroller¤¤½Õ¥Îfactory²£¥Íªº¤èªk¡C
+
+  *ç‚ºä»€éº¼ï¼Ÿ*ï¼šé€™ç¨®èªæ³•å¯ä»¥å¹«åŠ©ä½ æŠµæ“‹åœ¨ä¸æ­£ç¢ºæ™‚æ©Ÿä½¿ç”¨`$scope`çš„æ–¹æ³•çš„èª˜æƒ‘ï¼Œä¾‹å¦‚ä½ æœ‰æ›´å¥½çš„åšæ³•ï¼Œæˆ–æ˜¯ä»–å¯ä»¥æ¬åˆ°factoryè£¡é¢æ™‚ã€‚ä½ æ‡‰è©²åªåœ¨å¿…è¦æ™‚æ‰åœ¨controllerè£¡ä½¿ç”¨`$scope`ï¼Œå…¶ä»–çš„æ™‚å€™æ‡‰è©²åœ¨factoryè£¡é¢ä½¿
+  ç”¨ã€‚ä¾‹å¦‚ç•¶ä½ è¦ä½¿ç”¨[`$emit`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$emit)ï¼Œ[`$broadcast`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$broadcast), ä»¥åŠ[`$on`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$on)ä¾†æ”¶ç™¼äº‹ä»¶æ™‚ï¼Œæ‡‰è©²æŠŠå®ƒå€‘å¯«åœ¨factoryè£¡ï¼Œç„¶å¾Œå†å¾controllerå–ç”¨ã€‚
 
   ```javascript
   /* avoid */
@@ -394,8 +405,11 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ###### [Style [Y032](#style-y032)]
 
   - Use a capture variable for `this` when using the `controllerAs` syntax. Choose a consistent variable name such as `vm`, which stands for ViewModel.
+  - ç•¶ä½ åœ¨ä½¿ç”¨`controllerAs`èªæ³•çš„æ™‚å€™ï¼Œçµ¦`this`ä¸€å€‹capture variableï¼Œä¾‹å¦‚`vm`ï¼ˆViewModelï¼‰ã€‚
 
   *Why?*: The `this` keyword is contextual and when used within a function inside a controller may change its context. Capturing the context of `this` avoids encountering this problem.
+
+  *Why?*ï¼šå› ç‚ºthisæœƒå—åˆ°function scopeçš„å½±éŸ¿è€ŒæŒ‡å‘ä¸åŒçš„contextï¼Œæ‰€ä»¥åœ¨ä¸€é–‹å§‹å°±çµ¦ä»–ä¸€å€‹capture variableä¾†é¿å…é€™äº›å•é¡Œã€‚
 
   ```javascript
   /* avoid */
@@ -416,12 +430,16 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 
   Note: You can avoid any [jshint](http://www.jshint.com/) warnings by placing the comment below above the line of code. However it is not needed when the function is named using UpperCasing, as this convention means it is a constructor function, which is what a controller is in Angular.
 
+  è¨»ï¼šä½ å¯ä»¥ç”¨ä¸‹é¢çš„æ–¹å¼ä¾†é¿å…[jshint](http://www.jshint.com/)æ‹‹å‡ºè­¦å‘Šã€‚ä¸éé€™åœ¨å‡½å¼ç”¨å¤§å¯«é–‹é ­å‘½åï¼ˆé€šå¸¸æ˜¯ä»£è¡¨ä»–æ˜¯æ§‹é€ å‡½å¼ï¼‰çš„æ™‚å€™æ˜¯ä¸å¿…è¦çš„ã€‚
+
   ```javascript
   /* jshint validthis: true */
   var vm = this;
   ```
 
   Note: When creating watches in a controller using `controller as`, you can watch the `vm.*` member using the following syntax. (Create watches with caution as they add more load to the digest cycle.)
+
+  è¨»ï¼šç•¶ä½ ç”¨`controllerAs`èªæ³•åœ¨controllerä¸­å»ºç«‹watchesæ™‚ï¼Œå¯ä»¥åƒè€ƒä¸‹é¢çš„æ–¹å¼ã€‚ï¼ˆå»ºç«‹watchesçš„æ™‚å€™è¦è¬¹æ…ï¼Œå› ç‚ºä»–æœƒå°digest cycleå¸¶ä¾†è² æ“”ï¼‰
 
   ```html
   <input ng-model="vm.title"/>
@@ -1406,9 +1424,9 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 
     *Why?*: A controller may require data before it loads. That data may come from a promise via a custom factory or [$http](https://docs.angularjs.org/api/ng/service/$http). Using a [route resolve](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider) allows the promise to resolve before the controller logic executes, so it might take action based on that data from the promise.
 
-    *Why?*: The code executes after the route and in the controller¡¦s activate function. The View starts to load right away. Data binding kicks in when the activate promise resolves. A ¡§busy¡¨ animation can be shown during the view transition (via `ng-view` or `ui-view`)
+    *Why?*: The code executes after the route and in the controllerâ€™s activate function. The View starts to load right away. Data binding kicks in when the activate promise resolves. A â€œbusyâ€ animation can be shown during the view transition (via `ng-view` or `ui-view`)
 
-    Note: The code executes before the route via a promise. Rejecting the promise cancels the route. Resolve makes the new view wait for the route to resolve. A ¡§busy¡¨ animation can be shown before the resolve and through the view transition. If you want to get to the View faster and do not require a checkpoint to decide if you can get to the View, consider the [controller `activate` technique](#style-y080) instead.
+    Note: The code executes before the route via a promise. Rejecting the promise cancels the route. Resolve makes the new view wait for the route to resolve. A â€œbusyâ€ animation can be shown before the resolve and through the view transition. If you want to get to the View faster and do not require a checkpoint to decide if you can get to the View, consider the [controller `activate` technique](#style-y080) instead.
 
   ```javascript
   /* avoid */
@@ -2091,7 +2109,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
     1. `L`ocating our code is easy
     2. `I`dentify code at a glance
     3. `F`lat structure as long as we can
-    4. `T`ry to stay DRY (Don¡¦t Repeat Yourself) or T-DRY
+    4. `T`ry to stay DRY (Donâ€™t Repeat Yourself) or T-DRY
 
 ### Locate
 ###### [Style [Y141](#style-y141)]
@@ -2130,14 +2148,14 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 
   - Keep a flat folder structure as long as possible. When you get to 7+ files, begin considering separation.
 
-    *Why?*: Nobody wants to search 7 levels of folders to find a file. Think about menus on web sites ¡K anything deeper than 2 should take serious consideration. In a folder structure there is no hard and fast number rule, but when a folder has 7-10 files, that may be time to create subfolders. Base it on your comfort level. Use a flatter structure until there is an obvious value (to help the rest of LIFT) in creating a new folder.
+    *Why?*: Nobody wants to search 7 levels of folders to find a file. Think about menus on web sites â€¦ anything deeper than 2 should take serious consideration. In a folder structure there is no hard and fast number rule, but when a folder has 7-10 files, that may be time to create subfolders. Base it on your comfort level. Use a flatter structure until there is an obvious value (to help the rest of LIFT) in creating a new folder.
 
 ### T-DRY (Try to Stick to DRY)
 ###### [Style [Y144](#style-y144)]
 
   - Be DRY, but don't go nuts and sacrifice readability.
 
-    *Why?*: Being DRY is important, but not crucial if it sacrifices the others in LIFT, which is why I call it T-DRY. I don¡¦t want to type session-view.html for a view because, well, it¡¦s obviously a view. If it is not obvious or by convention, then I name it.
+    *Why?*: Being DRY is important, but not crucial if it sacrifices the others in LIFT, which is why I call it T-DRY. I donâ€™t want to type session-view.html for a view because, well, itâ€™s obviously a view. If it is not obvious or by convention, then I name it.
 
 **[Back to top](#table-of-contents)**
 
@@ -2977,7 +2995,7 @@ For anything else, API reference, check the [Angular documentation](//docs.angul
 
 ## Contributing
 
-Open an issue first to discuss potential changes/additions. If you have questions with the guide, feel free to leave them as issues in the repository. If you find a typo, create a pull request. The idea is to keep the content up to date and use github¡¦s native feature to help tell the story with issues and PR¡¦s, which are all searchable via google. Why? Because odds are if you have a question, someone else does too! You can learn more here at about how to contribute.
+Open an issue first to discuss potential changes/additions. If you have questions with the guide, feel free to leave them as issues in the repository. If you find a typo, create a pull request. The idea is to keep the content up to date and use githubâ€™s native feature to help tell the story with issues and PRâ€™s, which are all searchable via google. Why? Because odds are if you have a question, someone else does too! You can learn more here at about how to contribute.
 
 *By contributing to this repository you are agreeing to make your content available subject to the license of this repository.*
 
